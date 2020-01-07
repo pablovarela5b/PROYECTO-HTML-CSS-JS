@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+		<script src="relojp.js"></script>
+		<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
+		<p id="demo"></p>
+		<h1> HORARIO</h1>
+		<meta chartset="UTF-8">	
+		<script	type="text/javascript">
+			function cambiarFondo(x){
+				console.log(x.value);
+				
+				var body =document.getElementById("body")
+				body.style.backgroundColor = x.value;
+			}	
+		</script>	
+		<style>
+			h1{
+			margin-left:200px;
+			
+			background-color:lightblue;
+			color:white;
+			display: inline-table 
+			}
+			table{	
+			text-align:center;
+			}
+			.TIC{
+			background-color:lightyellow
+			}
+			.QUIMICA{
+			background-color:lightgreen
+			}
+			.MATEMATICAS{
+			background-color:#FF7676
+			}
+			.LENGUA{
+			background-color:lightblue
+			}
+			.HISTORIA{
+			background-color:#00CBC8
+			}
+			.FISICA{
+			background-color:green
+			}
+			.INGLES{
+			background-color:blue
+			}
+			.BIOLOGIA{
+			background-color:#FF00CD
+			}
+			#cont_75a7b1d0d1ae847af1cde71250c6cd04{
+			
+			display: inline-table
+		
+			}
+		
+			#media{
+			display: inline-block
+			}
+			
+			
+			
+			
+		</style>	
+		<script>
+			function mostrarDia(){
+					var hoy = new Date(); 
+					var dia = hoy.getDay(); 
+					var color="red";
+					//window.alert(dia);
+					//dia=0;
+					
+					if(dia==1){//lunes
+						document.getElementById('lunes').style.background=color;
+						document.getElementById('lunes').innerHTML="LUNES";
+					}
+					if(dia==2){//Martes
+						document.getElementById('martes').style.background=color;
+						document.getElementById('martes').innerHTML="MARTES";	
+					}
+					if(dia==3){//Miercoles
+						document.getElementById('miercoles').style.background=color;
+						document.getElementById('miercoles').innerHTML="MIERCOLES";	
+					}
+					
+					if(dia==4){//Jueves
+						document.getElementById('jueves').style.background=color;
+						document.getElementById('jueves').innerHTML="JUEVES";	
+					}
+					if(dia==5){//viernes
+						document.getElementById('viernes').style.background=color;
+						document.getElementById('viernes').innerHTML="VIERNES";
+					}
+					
+					if( (dia==6)|| (dia==0)){//finde
+						document.getElementById('sabado').style.background=color;
+						document.getElementById('sabado').innerHTML="SÁBADO";	
+						document.getElementById('domingo').style.background=color;
+						document.getElementById('domingo').innerHTML="DOMINGO";
+					}	
+			}
+				
+			
+		
+		
+		</script>
+		<script>
+		function Calcular() {
+				var vr1 = document.getElementById('a1').value;
+				var vr2 = document.getElementById('a2').value;
+				var vr3 = document.getElementById('a3').value;
+				var vr4 = document.getElementById('a4').value;
+				var vr5 = document.getElementById('a5').value;
+				var vr6 = document.getElementById('a6').value;
+				var vr7 = document.getElementById('a7').value;
+				var vr8 = document.getElementById('a8').value;
+				var p = (parseFloat(vr1)+parseFloat(vr2)+parseFloat(vr3)+parseFloat(vr4)+parseFloat(vr5)+parseFloat(vr6)+parseFloat(vr7)+parseFloat(vr8))/8;
+				document.getElementById('promedio').innerHTML = p;
+			}
+		</script>
+	</head>
+	
+	<body onload="mostrarDia()" id="body">
+			<div>
+				<table border="4">
+					<tr>
+						<td id="lunes">Lunes</td>
+						<td id="martes">Martes</td>
+						<td id="miercoles">Miércoles</td>
+						<td id="jueves">Jueves</td>
+						<td id="viernes">Viernes</td>
+					</tr>
+					<tr> 
+						<td class=TIC>TIC</td>
+						<td class=QUIMICA>QUIMICA</td>
+						<td class=QUIMICA>QUIMICA</td>
+						<td class=QUIMICA>QUIMICA</td>
+						<td class=QUIMICA>QUIMICA</td>
+					</tr>
+					<tr> 
+						<td class=LENGUA>LENGUA</td>
+						<td class=INGLES>INGLES</td>
+						<td class=BIOLOGIA>BIOLOGIA</td>
+						<td class=LENGUA>LENGUA</td>
+						<td class=TIC>TIC</td>
+					</tr>
+					<tr> 
+						<td class=FISICA>FISICA</td>
+						<td class=BIOLOGIA>BIOLOGIA</td>
+						<td class=MATEMATICAS>MATEMATICAS</td>
+						<td class=TIC>TIC</td>
+						<td class=FISICA>FISICA</td>
+					</tr>
+					<tr> 
+						<td colspan="5">RECREO</td>
+					</tr>
+					<tr> 
+						<td class=BIOLOGIA>BIOLOGIA</td>
+						<td class=LENGUA>LENGUA</td>
+						<td class=INGLES>INGLES</td>
+						<td class=MATEMATICAS>MATEMATICAS</td>
+						<td class=INGLES>INGLES</td>
+					</tr>
+					<tr>
+						<td class=MATEMATICAS>MATEMATICAS</td>
+						<td class=HISTORIA>HISTORIA</td>
+						<td class=FISICA>FISICA</td>
+						<td class=BIOLOGIA>BIOLOGIA</td>
+						<td class=HISTORIA>HISTORIA</td>
+					</tr>
+					<tr> 
+						<td class=HISTORIA>HISTORIA</td>
+						<td class=MATEMATICAS>MATEMATICAS</td>
+						<td class=HISTORIA>HISTORIA</td>
+						<td class=FISICA>FISICA</td>
+						<td class=LENGUA>LENGUA</td>
+					
+				</table>
+			</div>	
+				<div id="cont_75a7b1d0d1ae847af1cde71250c6cd04">
+					<script type="text/javascript" async src="https://www.tiempo.com/wid_loader/75a7b1d0d1ae847af1cde71250c6cd04"></script>
+				</div>	
+				<div id="media">
+					 Nota Matemáticas:<br>
+					 <input type="text" id="a1">
+					 <br>
+					 
+					 Nota TIC:<br>
+					 <input type="text" id="a2">
+					 <br>
+					 
+					 Nota Física:<br>
+					 <input type="text" id="a3">
+					 <br>
+					 
+					 Nota Historia:<br>
+					 <input type="text" id="a4">
+					 <br>
+					 
+					 Nota Química:<br>
+					 <input type="text" id="a5">
+					 <br>
+					 
+					 Nota Biología:<br>
+					 <input type="text" id="a6">
+					 <br>
+					 
+					 Nota Lengua:<br>
+					 <input type="text" id="a7">
+					 <br>
+					 
+					 Nota Inglés:<br>
+					 <input type="text" id="a8">
+					 <br><br>
+					 
+					 <input type="button" value="Calcular" onclick="Calcular();">
+				</div> 
+				<p id="promedio"></p>
+			<script>	
+				var hoy = new Date();
+				var h= hoy.getHours();
+				var m= hoy.getMinutes();	
+				var s= hoy.getSeconds();
+				var horaFINAL= 14;
+				var minutosFINAL= 20;
+				var segundosFINAL= 00;
+				var HorasRest= horaFINAL-h;
+				var MinRest= minutosFINAL-m;
+				var SegRest= segundosFINAL-s;
+			</script>
+			<script>
+				alert("TIEMPO PARA QUE ACABELAS CLASES");
+				alert(HorasRest+":" +MinRest+ ":" +SegRest);
+			</script>
+			
+				<select name="fondo" id="fondo"	onchange="cambiarFondo(this)">
+					<option value="lightblue">invierno</option>
+					<option value="#ff6232">verano</option>
+					<option value="brown">otoño</option>
+					<option value="lightgreen">primavera</option>
+				</select>	
+			
+	</body>
+</html>	
